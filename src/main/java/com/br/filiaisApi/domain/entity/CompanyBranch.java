@@ -16,7 +16,7 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-public class companysBranch {
+public class CompanyBranch {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
