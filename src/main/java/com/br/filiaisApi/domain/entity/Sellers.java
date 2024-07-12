@@ -39,7 +39,7 @@ public class Sellers {
     @NotNull
     private ContractType contractType;
 
-    @OneToMany(fetch = FetchType.LAZY)
+    @OneToMany
     private List<CompanyBranch> companyBranch;
 }
 
