@@ -1,6 +1,6 @@
 package com.br.filiaisApi.repository;
 
-import com.br.filiaisApi.domain.entity.Sellers;
+import com.br.filiaisApi.entity.Sellers;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

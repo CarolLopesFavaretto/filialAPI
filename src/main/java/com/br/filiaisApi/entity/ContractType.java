@@ -1,4 +1,4 @@
-package com.br.filiaisApi.domain.entity;
+package com.br.filiaisApi.entity;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 

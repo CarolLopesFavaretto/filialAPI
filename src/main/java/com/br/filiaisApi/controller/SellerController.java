@@ -1,6 +1,7 @@
 package com.br.filiaisApi.controller;
 
-import com.br.filiaisApi.domain.entity.Sellers;
+import com.br.filiaisApi.dto.request.SellerRequest;
+import com.br.filiaisApi.entity.Sellers;
 import com.br.filiaisApi.service.SellerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -17,7 +18,7 @@ public class SellerController {
     private SellerService service;
 
     @PostMapping
-    public ResponseEntity<Sellers> ceratedSellers(@RequestBody Sellers sellers){
+    public ResponseEntity<Sellers> createdSellers(@RequestBody SellerRequest sellers){
         return service.saveSellers(sellers);
     }
 }
