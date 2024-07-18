@@ -4,6 +4,7 @@ import com.br.filiaisApi.dto.mapper.SellerMapper;
 import com.br.filiaisApi.dto.request.SellerRequest;
 import com.br.filiaisApi.entity.ContractType;
 import com.br.filiaisApi.entity.Sellers;
+import com.br.filiaisApi.exception.ContractTypeNotFoundException;
 import com.br.filiaisApi.repository.SellerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -34,7 +35,7 @@ public class SellerService {
                 data.setRegistry(getRegistry(contractType));
                 return ResponseEntity.ok(repository.save(data));
             default:
-                throw new RuntimeException("Tipo de contrato invalido");
+                throw new ContractTypeNotFoundException("Tipo de contrato invalido");
         }
     }
 

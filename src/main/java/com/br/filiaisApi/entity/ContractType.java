@@ -1,5 +1,6 @@
 package com.br.filiaisApi.entity;
 
+import com.br.filiaisApi.exception.ContractTypeNotFoundException;
 import com.fasterxml.jackson.annotation.JsonCreator;
 
 public enum ContractType {
@@ -18,6 +19,6 @@ public enum ContractType {
                 return contractType;
             }
         }
-        throw new RuntimeException("Tipo de contrato invalido: " + value);
+        throw new ContractTypeNotFoundException("Tipo de contrato invalido: " + value);
     }
 }
